@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TP Malaysia | CNY Campaign</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ✅ Google Analytics (GA4) -->
+  <!-- Replace G-XXXXXXXXXX with your real Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+</head>
+
+<body>
+  <!-- Falling Angbao Layer -->
+  <div id="angbao-layer" aria-hidden="true"></div>
+
+  <main class="page">
+    <header class="top">
+      <img class="tp-logo" src="assets/tp-logo-white.png" alt="Teleperformance logo" />
+      <h1 class="title">TP Malaysia</h1>
+    </header>
+
+    <section class="content" role="region" aria-label="Campaign actions">
+
+      <!-- ✅ Add real links in href="" -->
+      <!-- ✅ data-cta is used for tracking later (optional, but recommended) -->
+      <a class="cta cta--gold" href="#" data-cta="learn_about_tp" aria-label="Learn more about TP">
+        <div class="cta__row">
+          <span class="cta__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+              <path d="M7 7h10v4H7V7Z" stroke="currentColor" stroke-width="2" />
+              <path d="M5 11h14v8H5v-8Z" stroke="currentColor" stroke-width="2" />
+              <path d="M9 7V5h6v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="cta__title">LEARN ABOUT TP</span>
+        </div>
+        <p class="cta__desc">
+          Step into a prosperous future — discover our culture, values, and what makes TP a great place to grow.
+        </p>
+      </a>
+
+      <a class="cta cta--red" href="#" data-cta="job_opportunities" aria-label="View job opportunities">
+        <div class="cta__row">
+          <span class="cta__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+              <path d="M4 4h7v7H4V4Z" stroke="currentColor" stroke-width="2"/>
+              <path d="M13 4h7v7h-7V4Z" stroke="currentColor" stroke-width="2"/>
+              <path d="M4 13h7v7H4v-7Z" stroke="currentColor" stroke-width="2"/>
+              <path d="M13 13h7v7h-7v-7Z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </span>
+          <span class="cta__title">JOB OPPORTUNITIES</span>
+        </div>
+        <p class="cta__desc">
+          Start the new year with new possibilities. Explore roles that help your career thrive this Chinese New Year.
+        </p>
+      </a>
+
+      <a class="cta cta--dark" href="#" data-cta="tp_xraf" aria-label="Open TP xRAF">
+        <div class="cta__row">
+          <span class="cta__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+              <path d="M12 3 20 6v6c0 5-3.5 8.8-8 9-4.5-.2-8-4-8-9V6l8-3Z" stroke="currentColor" stroke-width="2" />
+              <path d="M9.5 12.2 11.2 14l3.6-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="cta__title">TP XRAF</span>
+        </div>
+        <p class="cta__desc">
+          Share the fortune this festive season — refer talents and get rewarded when they join TP.
+        </p>
+      </a>
+
+    </section>
+
+    <footer class="footer">
+      <div>© 2026 TP.COM All rights reserved.</div>
+      <div>#MoreTogether</div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
