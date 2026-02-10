@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 
   <!-- ✅ Google Analytics (GA4) -->
-  <!-- Google tag (gtag.js) -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-92W4HV0FJ2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -15,7 +15,6 @@
     gtag('js', new Date());
     gtag('config', 'G-92W4HV0FJ2');
   </script>
-  
 </head>
 
 <body>
@@ -30,9 +29,12 @@
 
     <section class="content" role="region" aria-label="Campaign actions">
 
-      <!-- ✅ Add real links in href="" -->
-      <!-- ✅ data-cta is used for tracking later (optional, but recommended) -->
-      <a class="cta cta--gold" href="#" data-cta="learn_about_tp" aria-label="Learn more about TP">
+      <a class="cta cta--gold"
+         href="https://www.tp.com/en-my/locations/malaysia/"
+         target="_blank"
+         rel="noopener noreferrer"
+         data-cta="learn_about_tp"
+         aria-label="Learn more about TP">
         <div class="cta__row">
           <span class="cta__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
@@ -48,7 +50,12 @@
         </p>
       </a>
 
-      <a class="cta cta--red" href="#" data-cta="job_opportunities" aria-label="View job opportunities">
+      <a class="cta cta--red"
+         href="https://www.tp.com/en-my/locations/malaysia/"
+         target="_blank"
+         rel="noopener noreferrer"
+         data-cta="job_opportunities"
+         aria-label="View job opportunities">
         <div class="cta__row">
           <span class="cta__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
@@ -65,7 +72,12 @@
         </p>
       </a>
 
-      <a class="cta cta--dark" href="#" data-cta="tp_xraf" aria-label="Open TP xRAF">
+      <a class="cta cta--dark"
+         href="https://tpmyandtpth.github.io/xRAF/"
+         target="_blank"
+         rel="noopener noreferrer"
+         data-cta="tp_xraf"
+         aria-label="Open TP xRAF">
         <div class="cta__row">
           <span class="cta__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
@@ -91,4 +103,3 @@
   <script src="script.js"></script>
 </body>
 </html>
- 
