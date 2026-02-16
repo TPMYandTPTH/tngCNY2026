@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+  
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TP Malaysia | CNY Campaign</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 
   <!-- ✅ Google Analytics (GA4) -->
@@ -18,9 +21,6 @@
 </head>
 
 <body>
-  <!-- Falling Angbao Layer -->
-  <div id="angbao-layer" aria-hidden="true"></div>
-
   <main class="page">
     <header class="top">
       <img class="tp-logo" src="assets/tp-logo-white.png" alt="Teleperformance logo" />
@@ -29,70 +29,60 @@
 
     <section class="content" role="region" aria-label="Campaign actions">
 
-      <a class="cta cta--gold"
-         href="https://www.tp.com/en-my/locations/malaysia/"
-         target="_blank"
-         rel="noopener noreferrer"
-         data-cta="learn_about_tp"
-         aria-label="Learn more about TP">
-        <div class="cta__row">
-          <span class="cta__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
-              <path d="M7 7h10v4H7V7Z" stroke="currentColor" stroke-width="2" />
-              <path d="M5 11h14v8H5v-8Z" stroke="currentColor" stroke-width="2" />
-              <path d="M9 7V5h6v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </span>
-          <span class="cta__title">LEARN ABOUT TP</span>
-        </div>
-        <p class="cta__desc">
-          Step into a prosperous future — discover our culture, values, and what makes TP a great place to grow.
-        </p>
-      </a>
+<div class="intro">
+  <h2 class="intro__title">About TP Malaysia</h2>
+  <p class="intro__text">
+    Teleperformance (TP) Malaysia delivers customer experience and digital business services for some of the world’s most trusted brands.
+    Join a diverse, people-first workplace where you can grow your skills, build meaningful careers, and be part of a team that delivers impact—together.
+  </p>
+</div>
 
-      <a class="cta cta--red"
-         href="https://www.tp.com/en-my/locations/malaysia/"
-         target="_blank"
-         rel="noopener noreferrer"
-         data-cta="job_opportunities"
-         aria-label="View job opportunities">
-        <div class="cta__row">
-          <span class="cta__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
-              <path d="M4 4h7v7H4V4Z" stroke="currentColor" stroke-width="2"/>
-              <path d="M13 4h7v7h-7V4Z" stroke="currentColor" stroke-width="2"/>
-              <path d="M4 13h7v7H4v-7Z" stroke="currentColor" stroke-width="2"/>
-              <path d="M13 13h7v7h-7v-7Z" stroke="currentColor" stroke-width="2"/>
-            </svg>
-          </span>
-          <span class="cta__title">JOB OPPORTUNITIES</span>
-        </div>
-        <p class="cta__desc">
-          Start the new year with new possibilities. Explore roles that help your career thrive this Chinese New Year.
-        </p>
-      </a>
+  <!-- Job Opportunities (RED) -->
+  <a class="cta cta--red"
+     href="https://www.tp.com/en-my/locations/malaysia/"
+     target="_blank"
+     rel="noopener noreferrer"
+     data-cta="job_opportunities"
+     aria-label="View job opportunities">
+    <div class="cta__row">
+      <span class="cta__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+          <path d="M4 4h7v7H4V4Z" stroke="currentColor" stroke-width="2"/>
+          <path d="M13 4h7v7h-7V4Z" stroke="currentColor" stroke-width="2"/>
+          <path d="M4 13h7v7H4v-7Z" stroke="currentColor" stroke-width="2"/>
+          <path d="M13 13h7v7h-7v-7Z" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </span>
+      <span class="cta__title">JOB OPPORTUNITIES</span>
+    </div>
+    <p class="cta__desc">
+      Start the new year with new possibilities. Explore roles that help your career thrive with TP Malaysia.
+    </p>
+  </a>
 
-      <a class="cta cta--dark"
-         href="https://tpmyandtpth.github.io/xRAF/"
-         target="_blank"
-         rel="noopener noreferrer"
-         data-cta="tp_xraf"
-         aria-label="Open TP xRAF">
-        <div class="cta__row">
-          <span class="cta__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
-              <path d="M12 3 20 6v6c0 5-3.5 8.8-8 9-4.5-.2-8-4-8-9V6l8-3Z" stroke="currentColor" stroke-width="2" />
-              <path d="M9.5 12.2 11.2 14l3.6-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
-          <span class="cta__title">TP XRAF</span>
-        </div>
-        <p class="cta__desc">
-          Share the fortune this festive season — refer talents and get rewarded when they join TP.
-        </p>
-      </a>
+  <!-- TP xRAF (GOLD) -->
+  <a class="cta cta--gold"
+     href="https://tpmyandtpth.github.io/xRAF/"
+     target="_blank"
+     rel="noopener noreferrer"
+     data-cta="tp_xraf"
+     aria-label="Open TP xRAF">
+    <div class="cta__row">
+      <span class="cta__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+          <path d="M12 3 20 6v6c0 5-3.5 8.8-8 9-4.5-.2-8-4-8-9V6l8-3Z" stroke="currentColor" stroke-width="2" />
+          <path d="M9.5 12.2 11.2 14l3.6-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="cta__title">TP xRAF</span>
+    </div>
+    <p class="cta__desc">
+      Refer talents and get rewarded when they successfully join TP Malaysia.
+    </p>
+  </a>
 
-    </section>
+</section>
+
 
     <footer class="footer">
       <div>© 2026 TP.COM All rights reserved.</div>
