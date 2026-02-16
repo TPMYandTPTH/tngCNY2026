@@ -1,19 +1,11 @@
 /* ===== Base ===== */
 :root{
-  --gold: #D4AF37;
-  --gold2:#F3D27A;
+  --gold:#D4AF37;
   --deep-red:#B11226;
-  --red2:#8A0E1F;
-  --ink:#0d0b0a;
-  --text: rgba(255,255,255,.92);
+  --text:rgba(255,255,255,.92);
 
-  --border: rgba(212,175,55,.45);
-  --border-strong: rgba(212,175,55,.60);
-
-  --shadow: 0 18px 40px rgba(0,0,0,.35);
-  --shadow-soft: 0 10px 26px rgba(0,0,0,.28);
-  --shadow-hover: 0 16px 38px rgba(0,0,0,.32);
-  --ring: 0 0 0 3px rgba(212,175,55,.18);
+  --shadow:0 18px 40px rgba(0,0,0,.35);
+  --ring:0 0 0 3px rgba(212,175,55,.16);
 }
 
 *{ box-sizing:border-box; }
@@ -22,60 +14,32 @@ html,body{ height:100%; }
 body{
   margin:0;
   color:var(--text);
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
 
-  /* keep your approved look */
   background:
-    radial-gradient(1200px 700px at 50% 0%, rgba(255,210,170,.15), rgba(0,0,0,0) 55%),
-    url("assets/bg-cny-horse.png") center/cover no-repeat fixed;
+    radial-gradient(1200px 700px at 50% 0%, rgba(255,210,170,.12), rgba(0,0,0,0) 55%),
+    url("assets/bg-cny-no.png") center/cover no-repeat fixed;
 
   overflow-x:hidden;
 }
 
-/* Mobile perf: keep the same look, but avoid fixed jank on phones */
+/* Mobile perf: avoid fixed jank on phones */
 @media (max-width: 768px){
   body{ background-attachment: scroll; }
 }
 
-/* ===== Angbao layer ===== */
-#angbao-layer{
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  z-index:5;
-  overflow:hidden;
-}
-
-.angbao{
-  position:absolute;
-  top:-80px;
-  width:44px;
-  filter: drop-shadow(0 10px 18px rgba(0,0,0,.25));
-  opacity:.9;
-  will-change: transform, opacity;
-  animation-name: angbao-fall;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-}
-
-@keyframes angbao-fall{
-  to{
-    transform: translateY(115vh) rotate(360deg);
-    opacity:.7;
-  }
-}
-
 /* ===== Layout ===== */
 .page{
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Top header */
+
+/* Header */
 .top{
   text-align:center;
-  padding: 58px 18px 18px;
+  padding: 58px 18px 14px;
 }
 
 .tp-logo{
@@ -85,61 +49,54 @@ body{
   margin: 0 auto 12px;
 }
 
-/* IMPORTANT: this is your page title only */
 .title{
   margin:0;
   font-size: 44px;
   line-height:1.08;
   font-weight:800;
-  letter-spacing: .2px;
+  letter-spacing:.2px;
   text-shadow: 0 8px 22px rgba(0,0,0,.35);
 }
 
-/* Content column (desktop-friendly now) */
+/* Content column */
 .content{
   width: min(520px, 92vw);
   margin: 0 auto;
   display:flex;
   flex-direction:column;
-  gap: 20px;
+  gap: 18px;
 
-  /* 🔥 push buttons down without breaking mobile */
-  padding: clamp(48px, 18vh, 120px) 0 40px;
+  /* Keep the layout similar to xRAF center-stack */
+  padding: clamp(22px, 7vh, 54px) 0 40px;
 }
 
-/* Footer (xRAF style) */
-.footer{
-  margin-top:auto;
-  background:#000;
-  color:#fff;
-  display:flex;
-  justify-content:space-between;
-  gap:14px;
-  padding: 18px 22px;
-  font-size: 16px;
-  opacity:.95;
+/* ===== Intro block (replaces first button) ===== */
+.intro{
+  text-align:center;
+  padding: 16px 18px;
+  border-radius: 14px;
+
+  border: 1.5px solid rgba(212,175,55,.28);
+  background: rgba(0,0,0,.22);
+  box-shadow: 0 10px 26px rgba(0,0,0,.22);
+  backdrop-filter: blur(2px);
 }
 
-/* Responsive tweaks */
-@media (max-width: 520px){
-  .title{ font-size: 38px; }
-
-  .cta__title{ font-size: 17px; }
-  .cta{ padding: 17px 16px 15px; }
-
-  .footer{
-    flex-direction:column;
-    align-items:flex-start;
-    font-size: 15px;
-  }
+.intro__title{
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: .4px;
 }
 
-/* Desktop polish (ACTUALLY targets your classes) */
-@media (min-width: 992px){
-  .top{ padding-top: 64px; }
-  .content{ width: 520px; }
+.intro__text{
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  opacity: .92;
 }
-/* ===== CTA Cards (final, clean, matches screenshot) ===== */
+
+/* ===== CTA Cards ===== */
 .cta{
   display:block;
   width:100%;
@@ -149,10 +106,8 @@ body{
   border-radius:14px;
   padding:18px 18px 16px;
 
-  /* Double-frame look (slightly softer) */
   border:2px solid rgba(212,175,55,.68);
 
-  /* Matte premium bevel (closer to screenshot) */
   box-shadow:
     0 14px 34px rgba(0,0,0,.40),
     inset 0 0 0 2px rgba(255,235,165,.12),
@@ -167,7 +122,7 @@ body{
   outline:none;
   box-shadow:
     0 14px 34px rgba(0,0,0,.40),
-    0 0 0 3px rgba(212,175,55,.16),
+    var(--ring),
     inset 0 0 0 2px rgba(255,235,165,.12),
     inset 0 1px 0 rgba(255,255,255,.16),
     inset 0 -10px 22px rgba(0,0,0,.18);
@@ -207,7 +162,7 @@ body{
   box-shadow: inset 0 1px 0 rgba(255,255,255,.14);
 }
 
-/* Title like screenshot */
+/* Title */
 .cta__title{
   font-weight:900;
   letter-spacing:.8px;
@@ -216,67 +171,104 @@ body{
   text-transform:uppercase;
 }
 
-/* Description inside */
+/* Description */
 .cta__desc{
   margin:0 auto;
   max-width:420px;
-
   font-size:14px;
   line-height:1.45;
   opacity:.92;
 }
 
-/* ===== Colors (tuned to match screenshot: matte + warm) ===== */
+/* ===== Colors (gold + red only) ===== */
 .cta--gold{
-  background: linear-gradient(
-    to bottom,
-    #E4C46A 0%,
-    #D2AC4B 52%,
-    #B8892A 100%
-  );
+  background: linear-gradient(to bottom, #E4C46A 0%, #D2AC4B 52%, #B8892A 100%);
   color:#2a1a0c;
   border-color: rgba(231,196,91,.88);
 }
-
 .cta--gold .cta__icon{
   border-color: rgba(42,26,12,.16);
   background: rgba(42,26,12,.07);
 }
 
 .cta--red{
-  background: linear-gradient(
-    to bottom,
-    #AF1225 0%,
-    #930F20 54%,
-    #6F0B17 100%
-  );
+  background: linear-gradient(to bottom, #AF1225 0%, #930F20 54%, #6F0B17 100%);
   color:#fff;
   border-color: rgba(212,175,55,.64);
 }
-
 .cta--red .cta__icon{
   border-color: rgba(255,255,255,.16);
   background: rgba(255,255,255,.07);
 }
 
-.cta--dark{
-  background: linear-gradient(
-    to bottom,
-    #3E2319 0%,
-    #2A1510 58%,
-    #180C09 100%
-  );
+/* ===== Footer ===== */
+.footer{
+  margin-top:auto;
+  background:#000;
   color:#fff;
-  border-color: rgba(212,175,55,.56);
+  display:flex;
+  justify-content:space-between;
+  gap:14px;
+  padding: 18px 22px;
+  font-size: 16px;
+  opacity:.95;
 }
 
-.cta--dark .cta__icon{
-  border-color: rgba(212,175,55,.18);
-  background: rgba(212,175,55,.06);
-}
-
-/* Mobile tweaks */
+/* Responsive tweaks */
 @media (max-width: 520px){
+  .title{ font-size: 38px; }
   .cta{ padding:16px 16px 14px; }
   .cta__desc{ font-size:13.5px; }
+
+  .footer{
+    flex-direction:column;
+    align-items:flex-start;
+    font-size: 15px;
+  }
+}
+
+/* Desktop polish */
+@media (min-width: 992px){
+  .top{ padding-top: 64px; }
+  .content{ width: 520px; }
+}
+/* ===== Premium Intro Section ===== */
+
+.intro{
+  text-align:center;
+  padding: 28px 22px;
+  border-radius: 16px;
+
+  background: rgba(0,0,0,.28);
+  border: 1px solid rgba(212,175,55,.25);
+
+  box-shadow: 0 14px 30px rgba(0,0,0,.25);
+  backdrop-filter: blur(6px);
+}
+
+.intro__title{
+  margin:0 0 14px 0;
+  font-size:20px;
+  font-weight:700;
+  letter-spacing:.6px;
+  color:#fff;
+  position:relative;
+}
+
+.intro__title::after{
+  content:"";
+  display:block;
+  width:48px;
+  height:3px;
+  margin:12px auto 0;
+  background:linear-gradient(90deg, #D4AF37, #F3D27A);
+  border-radius:2px;
+}
+
+.intro__text{
+  margin:0;
+  font-size:15px;
+  line-height:1.65;
+  color:rgba(255,255,255,.92);
+  font-weight:400;
 }
